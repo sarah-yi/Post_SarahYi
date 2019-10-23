@@ -1,0 +1,28 @@
+/* .underline {
+  text-decoration: underline;
+} */
+
+div {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.white {
+  color: white;
+}
+
+.aqua {
+  background-color: rgb(65, 177, 177);
+}
+
+.large {
+  font-size:  50px;
+}
+
+
+
+.title:empty {
+  border-bottom: none;
+  padding-bottom: none;
+}

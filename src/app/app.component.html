@@ -1,0 +1,51 @@
+<!-- <div>
+  <input type="text" placeholder="Noun" [(ngModel)]="nounInput" />
+  <input type="number" placeholder="Age" [(ngModel)]="age" />
+</div>
+
+<h3>
+<span class="underline"> {{ nounInput
+    .split('')
+    .reverse()
+    .join('')
+  }} </span>
+  You were born in <span [hidden]="!age"> {{ 2019 - age }}</span>
+</h3>
+
+<div>{{ age >= 18 && 'You are old enough to vote' }}</div>
+
+ -->
+
+ <!-- <h1 [ngClass]="classList">Cat Land</h1>
+ <button (click) = changeColor()>Change Text Color</button>
+ <button (click) = changeBackground()>Change Background Color</button>
+ <button (click) = changeFontSize()>Change Font Size</button>
+
+ <p *ngIf="show" >{{ title }}</p>
+
+ <img src="https://i.chzbgr.com/full/5800706048/h796C80BF/" /> -->
+
+ <div>
+   <!-- <section *ngFor="let post of posts">
+     <h3 [ngClass]="{title: post.title}"> {{post.title}} </h3>  if there's a title, apply the title class -->
+     <!-- <p> {{post.body}} </p>
+     <span [ngClass]="{bold: post.comments > 6}"> {{post.comments}} </span>
+   </section> --> 
+
+
+   <h3 *ngFor="let post of posts">  
+     {{post.title}}
+   </h3>
+
+   <single-post
+    *ngFor="let post of posts; let i = index"
+    [title]="post.title"
+    [body]="post.body"
+    [comments]="post.comments"
+    (newTitle)="onNewTitle($event, i)"
+   ></single-post> 
+ </div>
+
+ <!-- if we have any lists of blog posts, and want to show similar ui, we can use this single-post to do this. -->
+
+
